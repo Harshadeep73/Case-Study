@@ -5,7 +5,7 @@ public class Farmer {
    private int fertilizer;
    private Soil soil;
    private Crop crop;
-   String advice;
+   String get_advice;
    
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
 	   if(name.trim()!=""&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
@@ -27,19 +27,31 @@ public class Farmer {
 	   }
    }
    
+   public void use_fertilizer(int fertilizer){
+        if(fertilizer >= 0){
+           
+        } 
+   }
    public double calc_produce(int water) {
 		return produce = (double)crop.calc_health(soil.get_soil_fertility())*land;
 	}
    
    public void receive_advice(String advice_sent){
 	   if(advice_sent.trim()!=""){
-		   advice = advice_sent;
+		   get_advice = advice_sent;
 		   act_on_advice();
 	   }
    }
    
-   
    public void act_on_advice() {
-	   
+	   if(this.get_advice.trim()!=""){
+         String[] parts = get_advice.split(":");
+         if(parts[0]=="Water"){
+            if(parts[1]=="")
+         }
+
+      }
+      
+
    }
 }
