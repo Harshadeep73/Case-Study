@@ -14,5 +14,11 @@ public class Soil {
     	return soil_fertility;
     }
     
+    public void fertilize(int fertilizer){
+          if(fertilizer > 0 && fertilizer <= 10){
+            soil_fertility += fertilizer;
+            return;
+          }
+    }
     
 }

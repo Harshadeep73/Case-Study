@@ -14,6 +14,7 @@ public class Admin {
     ]
 
     public void display_records(){
+       System.out.println("");
        
        
        for(String s : record_of_advice){

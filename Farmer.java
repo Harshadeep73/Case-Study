@@ -46,10 +46,34 @@ public class Farmer {
    public void act_on_advice() {
 	   if(this.get_advice.trim()!=""){
          String[] parts = get_advice.split(":");
-         if(parts[0]=="Water"){
-            if(parts[1]=="")
-         }
+            
+            //decides the scale of change in the desired variable.
+            if(parts[1].equals("Much")){
+               int improvement = 2;
+            }
+            else{
+               int improvement = 1;
+            }
 
+            //decides the direction of change.
+            if(parts[2].equals("Less")){
+               improvement *= -1;
+            }
+            
+            //decides the variable in question.
+            if(parts[0].equals("Water")){
+               crop.set_water(crop.get_water()+improvement);
+               return;
+            }
+            else if(parts[0].equals("Insects")){
+               fertilizer = improvement;
+               soil.fertilize(fertilizer);
+               crop.update_health;
+               return;
+            } 
+            
+
+                 
       }
       
 
