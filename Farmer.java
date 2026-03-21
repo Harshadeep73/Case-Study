@@ -1,5 +1,6 @@
 import java.util.*;
 public class Farmer {
+   public final int farmer_id;
    private String name;
    private double produce,land,yield;
    private int fertilizer;
@@ -12,6 +13,7 @@ public class Farmer {
 		   this.name = name;
 		   soil = new Soil(soil_name,soil_fertility);
 		   this.crop = crop;
+         farmer_id = System.token;
 	   }
    }
    
@@ -27,11 +29,6 @@ public class Farmer {
 	   }
    }
    
-   public void use_fertilizer(int fertilizer){
-        if(fertilizer >= 0){
-           
-        } 
-   }
    public double calc_produce(int water) {
 		return produce = (double)crop.calc_health(soil.get_soil_fertility())*land;
 	}
@@ -66,16 +63,12 @@ public class Farmer {
                return;
             }
             else if(parts[0].equals("Insects")){
-               fertilizer = improvement;
+               this.fertilizer = improvement;
                soil.fertilize(fertilizer);
                crop.update_health;
                return;
-            } 
-            
-
-                 
+            }    
       }
       
-
    }
 }

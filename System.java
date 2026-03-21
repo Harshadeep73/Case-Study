@@ -1,7 +1,16 @@
 package CaseStudy;
 public class System {
-    public void get_data(){
-
+    private static int tokens;
+    
+    public int get_token(){
+        if(!tokens>0){
+            tokens=1;
+        }
+        tokens++;
+        return tokens-1;
+    }
+    public void get_data(Farmer f){
+       if(f.produce != f.crop.)  
     }
 
     public void process_data(){
