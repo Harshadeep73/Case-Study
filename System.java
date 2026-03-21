@@ -10,7 +10,7 @@ public class System {
         return tokens-1;
     }
     public void get_data(Farmer f){
-       if(f.produce != f.crop.)  
+         
     }
 
     public void process_data(){

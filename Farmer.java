@@ -21,7 +21,6 @@ public class Farmer {
 	   this.fertilizer = fertilizer;
    }
    
-   
    public void set_land(double land) {
 	   if(land > 0) {
 		   this.land = land;
@@ -30,7 +29,8 @@ public class Farmer {
    }
    
    public double calc_produce(int water) {
-		return produce = (double)crop.calc_health(soil.get_soil_fertility())*land;
+		yield = (double)croo.calc_health(soil.get_soil_fertility());
+      return produce = (double)crop.calc_health(soil.get_soil_fertility())*land;
 	}
    
    public void receive_advice(String advice_sent){
