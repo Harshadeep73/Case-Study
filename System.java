@@ -10,7 +10,9 @@ public class System {
         return tokens-1;
     }
     public void get_data(Farmer f){
-         
+       if(f.yield < f.crop.health){
+        
+       }  
     }
 
     public void process_data(){
