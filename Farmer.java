@@ -1,19 +1,19 @@
 import java.util.*;
 public class Farmer {
-   public final int farmer_id;
+   private final int farmer_id;
    private String name;
    private double produce,land,yield;
    private int fertilizer;
    private Soil soil;
    private Crop crop;
-   String get_advice;
+   private String get_advice;
    
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
 	   if(name.trim()!=""&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
 		   this.name = name;
 		   soil = new Soil(soil_name,soil_fertility);
 		   this.crop = crop;
-         farmer_id = System.token;
+         farmer_id = 
 	   }
    }
    
@@ -28,9 +28,9 @@ public class Farmer {
 	   }
    }
    
-   public double calc_produce(int water) {
-		yield = (double)croo.calc_health(soil.get_soil_fertility());
-      return produce = (double)crop.calc_health(soil.get_soil_fertility())*land;
+   public double calc_produce() {
+      this.yield = (double)crop.calc_health(soil.get_soil_fertility());
+      return produce = yield*this.land;
 	}
    
    public void receive_advice(String advice_sent){
