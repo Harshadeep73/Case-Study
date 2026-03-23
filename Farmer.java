@@ -1,5 +1,5 @@
 import java.util.*;
-public class Farmer {
+abstract class Farmer {
    private final int farmer_id;
    private String name;
    private double produce,land,yield;
@@ -7,11 +7,10 @@ public class Farmer {
    private Soil soil;
    private Crop crop;
    private String get_advice;
-   
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
 	   if(name.trim()!=""&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
 		   this.name = name;
-		   soil = new Soil(soil_name,soil_fertility);
+		   soil = new Soil(soil_name,soil_fertility);   
 		   this.crop = crop;
          farmer_id = 
 	   }
@@ -70,4 +69,7 @@ public class Farmer {
             }    
       }
    }
+}
+class Vegetable_Farmer extends Farmer{
+   
 }

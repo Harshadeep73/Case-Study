@@ -8,6 +8,7 @@ public class Expert {
          this.farmers = farmers;
          this.expert_id = expert_id
     }
+    
     public String generate_advice(){
        
     }  

@@ -1,5 +1,5 @@
 package CaseStudy;
-public class Crop {
+abstract class Crop {
     private String name; 
 	private int health, water, insects, water_req;
     
@@ -9,6 +9,7 @@ public class Crop {
 		  this.water=water;
 		  this.insects=insects;
 		  this.water_req = water_req;
+		  this.time_in_months=time;
 	  }
     }
 	
@@ -32,8 +33,9 @@ public class Crop {
 	
 	public void update_health(){
 		calc_health(soil_fertility);
-	}
+	}	
+}
+class Fruit extends Crop{
+   
 
-	
-	
 }
