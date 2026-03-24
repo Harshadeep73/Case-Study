@@ -1,0 +1,88 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.4">
+  <diagram name="Page-1" id="gF9BiPnQEVnXzrWcPoXy">
+    <mxGraphModel dx="1783" dy="979" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8alAEECrF8hI_OauBtMJ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Admin : Database&lt;div&gt;Holds: System, ArrayList.&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-1" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8alAEECrF8hI_OauBtMJ-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="System : Processor&lt;div&gt;Holdes: processing methods&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="250" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-2" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8alAEECrF8hI_OauBtMJ-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Expert: String Generator&lt;div&gt;Holds: data parsing methods, String generating methods&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="120" x="250" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Abstract Farmer:&lt;br&gt;Non-primitive data bank." vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Fruit Farmer: Variant Farmer" vertex="1">
+          <mxGeometry height="60" width="120" x="260" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Vegetable Farmer:&lt;div&gt;Variant Farmer&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="120" x="80" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Cash Crop Farmer:&lt;br&gt;Variant Farmer" vertex="1">
+          <mxGeometry height="60" width="120" x="440" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-9" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-4" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8alAEECrF8hI_OauBtMJ-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="460" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-10" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-4" style="endArrow=none;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="8alAEECrF8hI_OauBtMJ-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="290" y="770" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-11" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-6" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="8alAEECrF8hI_OauBtMJ-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="400" y="420" as="sourcePoint" />
+            <mxPoint x="450" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8alAEECrF8hI_OauBtMJ-15" edge="1" parent="1" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="8alAEECrF8hI_OauBtMJ-2" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="70" />
+            </Array>
+            <mxPoint x="310" y="70" as="sourcePoint" />
+            <mxPoint x="500" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Soil&amp;nbsp;&lt;div&gt;name : String&lt;/div&gt;&lt;div&gt;Holdes: Soil data.&lt;/div&gt;&lt;div&gt;Variable for produce calc&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="120" x="20" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Crop&lt;div&gt;name : String&lt;/div&gt;&lt;div&gt;Holds: Crop data&lt;/div&gt;&lt;div&gt;Variable for produce calc and Farmer Type&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="180" x="530" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-9" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-4" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="s6f6AgHBsc-FTg3wzi92-5" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="640" />
+            </Array>
+            <mxPoint x="50" y="630" as="sourcePoint" />
+            <mxPoint x="210" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s6f6AgHBsc-FTg3wzi92-10" edge="1" parent="1" source="8alAEECrF8hI_OauBtMJ-4" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="s6f6AgHBsc-FTg3wzi92-6" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="640" />
+            </Array>
+            <mxPoint x="350" y="550" as="sourcePoint" />
+            <mxPoint x="510" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
