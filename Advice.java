@@ -1,0 +1,15 @@
+class Advice{
+    private double waterChange;
+    private double pesticideChange;
+    private double fertilizerChange;
+    private String recommendation;
+    Advice(double waterChange, double pesticideChange, double fertilizerChange){
+      this.waterChange = waterChange;
+      this.pesticideChange = pesticideChange;
+      this.fertilizerChange = fertilizerChange;
+    }
+
+    private String generate_advice(){
+        
+    }
+}
