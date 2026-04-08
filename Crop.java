@@ -7,7 +7,7 @@ class Crop {
 	private double health;
     
 	Crop(String name,int water_req){
-	  if(name.trim()!=""&& water_req > 0 && water_req<=10) {
+	  if(!(name.trim().isEmpty())&& water_req > 0 && water_req<=10) {
 		  this.name=name;
 		  this.water_req = water_req;
 	  }

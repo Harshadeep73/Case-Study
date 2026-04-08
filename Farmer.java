@@ -1,18 +1,21 @@
 import java.util.*;
 abstract class Farmer {
+   private static int farmer_counter = 1;
    private final int farmer_id;
    private String name;
-   private double produce,land,yield;
+   private double yield;
    private int fertilizer;
    private Soil soil;
    private Crop crop;
    private String get_advice;
+
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
 	   if(name.trim()!=""&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
 		   this.name = name;
 		   soil = new Soil(soil_name,soil_fertility);   
 		   this.crop = crop;
-         farmer_id = 
+         farmer_id = farmer_counter;
+         farmer_counter++;
 	   }
    }
    
@@ -32,7 +35,7 @@ abstract class Farmer {
       return produce = yield*this.land;
 	}
    
-   public void receive_advice(String advice_sent){
+   public void receive_advice(Advice advice_sent){
 	   if(advice_sent.trim()!=""){
 		   get_advice = advice_sent;
 		   act_on_advice();
