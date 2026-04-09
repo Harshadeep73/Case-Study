@@ -1,9 +1,9 @@
 package CaseStudy;
 class Crop {
     private String name; 
-	private int water,pesticide;
+	private int water,pesticide,insects;
 	//find a way to make insects an ideally final variable or one which doesn't change anyhow.
-	private final int water_req, insects;
+	private final int water_req;
 	private double health;
     
 	Crop(String name,int water_req){
@@ -12,14 +12,37 @@ class Crop {
 		  this.water_req = water_req;
 	  }
     }
+
+	/**
+	 * @param water water being supplied currently;
+	 * @param insects insects that are set unless a new crop is deployed once again
+	 * @param pesticide pesticide that is initially used
+	 * @param soil_Fertilty the fertility of the soil in which the crop is being grown
+	 * 
+	 * initially assigns the said parameters and calculates health.
+	 *  	
+	 * @return nothing
+	 */
+	
 	public void deploy(int water, int insects, int pesticide, soil_Fertility){
           this.insects = insects;
 		  change_Conditions(water, pesticide, soil_Fertility);
 	}
+
+	/**
+	 * @param water the new value (if new) of water being supplied
+	 * @param pesticide the new value (if new) of the pesticide used
+	 * @param soil_Fertility the new value (if new) of the fertility of the soil
+	 * 
+	 * used to change the parameters when needed and calculates health
+	 * 
+	 * @return nothing 
+	 */
+
 	public void change_Conditions(int water,int pesticide, int soil_Fertility){
           this.water = water;
 		  this.pesticide = pesticide;
-		  calc_health(soil_Fertility);
+		  update_health(int soil_Fertility);
 	}
 	
 	public int get_water() {
@@ -30,15 +53,28 @@ class Crop {
 		return water_req;
 	}
 	
+	/**
+	 * @param soil_Fertility the present soil_Fertility.
+	 * health computation by leveraging net effects of all 3 elements: water, insects and soil_Fertility.
+	 * @return nothing
+	 */
 	private void calc_health(int soil_Fertility) {
 		double water_Effect  = 10-Math.abs(water-water_req);
-
-		//Need to change the way Insect_effect gets calc'd when pesticide is > than insects. 
-		double insect_Effect = Math.max(0, (insects-pesticide));
-		health = ((water_Effect + soil_Fertility) / 2.0) * insectEffect;
+		double insect_Effect = (Math.max(0, (insects-pesticide)));
+		health = ((water_Effect+soil_Fertility/2)*(10-insect_Effect))/10;
 	}
 	
-	public void update_health(){
+	/**
+	 * @param soil_Fertility the parameter passed through by @change_Conditions().
+	 * redundant. Not needed actually. But the submission was done before I could realize.
+	 * @return nothing
+	 */
+
+	public void update_health(int soil_Fertility){
 		calc_health(soil_Fertility);
+	}
+
+	public int get_pesticide(){
+		return this.pesticide;
 	}	
 }

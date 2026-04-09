@@ -2,12 +2,11 @@ import java.util.*;
 abstract class Farmer {
    private static int farmer_counter = 1;
    private final int farmer_id;
-   private String name;
+   private String name, recommendation;
    private double yield;
    private int fertilizer;
    private Soil soil;
    private Crop crop;
-   private String get_advice;
 
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
 	   if(name.trim()!=""&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
@@ -21,58 +20,21 @@ abstract class Farmer {
    
    public void set_fertilizer(int fertilizer) {
 	   this.fertilizer = fertilizer;
+      soil.fertilize(this.fertilizer);
    }
-   
-   public void set_land(double land) {
-	   if(land > 0) {
-		   this.land = land;
-		   return;
-	   }
+
+   public double calc_Yield(){
+      this.yield = health*10;
+      return yield;
    }
-   
-   public double calc_produce() {
-      this.yield = (double)crop.calc_health(soil.get_soil_fertility());
-      return produce = yield*this.land;
-	}
    
    public void receive_advice(Advice advice_sent){
-	   if(advice_sent.trim()!=""){
-		   get_advice = advice_sent;
-		   act_on_advice();
-	   }
+	   this.recommendation = advice_sent.recommendation;
+      act_on_advice(advice_sent.waterChange, advice_sent.pesticideChange, advice_sent.fertilizerChange);
    }
    
-   public void act_on_advice() {
-	   if(this.get_advice.trim()!=""){
-         String[] parts = get_advice.split(":");
-            
-            //decides the scale of change in the desired variable.
-            if(parts[1].equals("Much")){
-               int improvement = 2;
-            }
-            else{
-               int improvement = 1;
-            }
-
-            //decides the direction of change.
-            if(parts[2].equals("Less")){
-               improvement *= -1;
-            }
-            
-            //decides the variable in question.
-            if(parts[0].equals("Water")){
-               crop.set_water(crop.get_water()+improvement);
-               return;
-            }
-            else if(parts[0].equals("Insects")){
-               this.fertilizer = improvement;
-               soil.fertilize(fertilizer);
-               crop.update_health;
-               return;
-            }    
-      }
+   public void act_on_advice(double waterChange, double pesticideChange, double fertilizerChange){      
+       soil.fertilize(fertilizerChange);
+       change_Conditions(water+waterChange, crop.get_pesticide()+pesticideChange, soil.get_soil_fertility());
    }
-}
-class Vegetable_Farmer extends Farmer{
-   
 }

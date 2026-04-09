@@ -1,13 +1,8 @@
 package CaseStudy;
-public class Expert {
-    String give_advice;
-    Farmer[] farmers;
-
-    Expert(){
-         this.expert_id = ;
-    }
+public class Expert{
+    private Advice advice;
     
-    public String generate_advice(){
+    public Advice generate_advice(){
        
     }  
 }
