@@ -10,10 +10,22 @@ public class Soil {
         }
     }
     
+
+    /**
+     * @param nothing
+     * 
+     * @return soil_fertility the present fertility value of the soil.
+     */
     public int get_soil_fertility() {
     	return soil_fertility;
     }
     
+    /**
+     * @param fertilizer the fertilizer that is to be used to enrich the soil.
+     * 
+     * @return nothing.
+     */
+
     public void fertilize(int fertilizer){
           if(fertilizer > 0 && fertilizer <= 10){
             soil_fertility += fertilizer;

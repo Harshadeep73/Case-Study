@@ -14,4 +14,9 @@ class Advice{
     private String generate_recommendation(){
         
     }
+
+    public double[] dispence(){
+      double[] values = {waterChange,pesticideChange,fertilizerChange};
+      return values;
+    }
 }
