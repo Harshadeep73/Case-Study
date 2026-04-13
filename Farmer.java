@@ -51,7 +51,8 @@ abstract class Farmer {
 
    public void receive_advice(Advice advice_sent){
 	   this.recommendation = advice_sent.recommendation;
-      act_on_advice(advice_sent.dispence[0], advice_sent.dispence[1], advice_sent.dispence[2]);
+      double[] values = advice_sent.dispence();
+      act_on_advice(values[0], values[2], values[1]);
    }
    
    /**
@@ -74,5 +75,44 @@ abstract class Farmer {
    public void act_on_advice(double waterChange, double pesticideChange, double fertilizerChange){      
        soil.fertilize(fertilizerChange);
        change_Conditions(water+waterChange, crop.get_pesticide()+pesticideChange, soil.get_soil_fertility());
+   }
+
+
+   /**
+    * @param nothing
+    * 
+    * @return returns the crop in order to access the crop's getters and setters.
+    */
+
+   public Crop getCrop(){
+      return crop;   
+   }
+   
+   /**
+    * @param nothing
+    * 
+    * @return returns the soil in order to access its getters and setters.
+    */
+
+   public Soil getSoil(){
+      return soil;
+   }
+
+   /**
+    * @param nothing
+    * 
+    * @return the id for storing and recognition purposes.
+    */
+   public int getId(){
+      return farmer_id;
+   }
+   
+   /**
+    * @param nothing
+    * 
+    * @return the name for better recognition purposes when displaying the records.
+    */
+   public String getName(){
+      return name;
    }
 }

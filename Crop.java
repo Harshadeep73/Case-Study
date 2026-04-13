@@ -38,18 +38,10 @@ class Crop {
 	 * @return nothing 
 	 */
 
-	public void change_Conditions(double water,double pesticide,double soil_Fertility){
+	public void changeConditions(double water,double pesticide,double soil_Fertility){
           this.water = water;
 		  this.pesticide = pesticide;
 		  update_health(int soil_Fertility);
-	}
-	
-	public double get_water() {
-		return water;
-	}
-	
-	public double getwater_req() {
-		return water_req;
 	}
 	
 	/**
@@ -57,13 +49,25 @@ class Crop {
 	 * health computation by leveraging net effects of all 3 elements: water, insects and soil_Fertility.
 	 * @return nothing
 	 */
-	private void calc_health(double soil_Fertility) {
+	private void calcHealth(double soil_Fertility) {
 		double water_Effect  = 10-Math.abs(water-water_req);
 		double insect_Effect = (Math.max(0, (insects-pesticide)));
 		health = ((water_Effect+soil_Fertility/2)*(10-insect_Effect))/10;
 	}
 	
-	public double get_pesticide(){
+	public double getWater() {
+		return water;
+	}
+	
+	public double getWaterReq() {
+		return water_req;
+	}
+	
+	public double getPesticide(){
 		return this.pesticide;
+	}
+
+	public double getInsects(){
+		return insects;
 	}	
 }

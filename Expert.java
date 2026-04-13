@@ -2,7 +2,11 @@ package CaseStudy;
 public class Expert{
     private Advice advice;
     
-    public Advice generate_advice(double water_Change, double ){
-       advice = new Advice()
+    public void generate_advice(double waterChange, double fertilizerChange, double pesticideChange, int farmer_id, String name){
+       advice = new Advice(waterChange,fertilizerChange,pesticideChange,farmer_id,name);
     }  
+
+    public Advice getAdvice(){
+        return advice;
+    }
 }
