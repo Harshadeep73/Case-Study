@@ -4,7 +4,7 @@ abstract class Farmer {
    private final int farmer_id;
    private String name, recommendation;
    private double yield;
-   private int fertilizer;
+   private double fertilizer;
    private Soil soil;
    private Crop crop;
 
@@ -54,6 +54,15 @@ abstract class Farmer {
       act_on_advice(advice_sent.dispence[0], advice_sent.dispence[1], advice_sent.dispence[2]);
    }
    
+   /**
+    * @param nothing
+    * 
+    * @return fertilizer the fertilizer that's provided to the crop.
+    */
+   public double get_fertilizer(){
+      return fertilizer;
+   }
+
    /**
     * @param waterChange the change in water according to the expert.
     * @param pesticideChange the change in pesticide according to the expert.

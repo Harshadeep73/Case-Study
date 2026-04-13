@@ -1,11 +1,11 @@
 package CaseStudy;
 class Crop {
     private String name; 
-	private int water,pesticide,insects;
-	private final int water_req;
+	private double water,pesticide,insects;
+	private final double water_req;
 	private double health;
     
-	Crop(String name,int water_req){
+	Crop(String name,double water_req){
 	  if(!(name.trim().isEmpty())&& water_req > 0 && water_req<=10) {
 		  this.name=name;
 		  this.water_req = water_req;
@@ -23,7 +23,7 @@ class Crop {
 	 * @return nothing
 	 */
 	
-	public void deploy(int water, int insects, int pesticide, soil_Fertility){
+	public void deploy(double water,double insects,double pesticide,double soil_Fertility){
           this.insects = insects;
 		  change_Conditions(water, pesticide, soil_Fertility);
 	}
@@ -38,17 +38,17 @@ class Crop {
 	 * @return nothing 
 	 */
 
-	public void change_Conditions(int water,int pesticide, int soil_Fertility){
+	public void change_Conditions(double water,double pesticide,double soil_Fertility){
           this.water = water;
 		  this.pesticide = pesticide;
 		  update_health(int soil_Fertility);
 	}
 	
-	public int get_water() {
+	public double get_water() {
 		return water;
 	}
 	
-	public int getwater_req() {
+	public double getwater_req() {
 		return water_req;
 	}
 	
@@ -57,13 +57,13 @@ class Crop {
 	 * health computation by leveraging net effects of all 3 elements: water, insects and soil_Fertility.
 	 * @return nothing
 	 */
-	private void calc_health(int soil_Fertility) {
+	private void calc_health(double soil_Fertility) {
 		double water_Effect  = 10-Math.abs(water-water_req);
 		double insect_Effect = (Math.max(0, (insects-pesticide)));
 		health = ((water_Effect+soil_Fertility/2)*(10-insect_Effect))/10;
 	}
 	
-	public int get_pesticide(){
+	public double get_pesticide(){
 		return this.pesticide;
 	}	
 }

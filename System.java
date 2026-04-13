@@ -8,16 +8,15 @@ public class System {
         expert = new Expert();
     }
 
-    public void get_data(Farmer f){
-        
-    }
-
-    public void process_data(){
+    public void process_data(Farmer f){
        
-    }
+       if(f.crop.health < 10){
+          double waterChange = f.crop.get_water()-f.crop.getwater_req();
+          double fertilizerChange = f.get
+       }
+       
 
-    public String send_over_data(){
-
+       expert.generate_advice()
     }
 
 }

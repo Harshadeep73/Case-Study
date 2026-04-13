@@ -5,15 +5,14 @@ public class Admin {
     
     Admin(){
         record_of_advice = new ArrayList<>();
-        record_of_recommmendations = new ArrayList<>();
     }
 
-    public void store_advice(String advice_sent)[
+    public void store_advice(String advice_sent){
         if(!advice_sent.trim().isEmpty()){
             record_of_advice.add(advice_sent);
             return;
         }
-    ]
+    }
 
     public void display_records(){
        System.out.println("");
