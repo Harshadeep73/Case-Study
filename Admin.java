@@ -3,7 +3,6 @@ import java.util.*;
 public class Admin {
     private ArrayList<Advice> record_of_advice;
     
-    
     Admin(){
         record_of_advice = new ArrayList<>();
         record_of_recommmendations = new ArrayList<>();
@@ -16,18 +15,11 @@ public class Admin {
         }
     ]
 
-    public void store_recommendation(String recommendation){
-        if(!recommendation.trim().isEmpty()){
-            record_of_recommmendations.add(recommendation);
-            return;
-        }
-    }
-
     public void display_records(){
        System.out.println("");
        
-       for(String s : record_of_recommmendations){
-          System.out.println(s);
+       for(Advice a : record_of_advice){
+          System.out.println(s.get_recommendation());
        }
     }
 

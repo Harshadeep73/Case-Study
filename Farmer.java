@@ -9,13 +9,17 @@ abstract class Farmer {
    private Crop crop;
 
    Farmer(String name,String soil_name, int soil_fertility,Crop crop){
-	   if(!(name.trim().isEmpty())&&soil_name.trim()!=""&&soil_fertility>0&&soil_fertility<=100){
+	   if(!(name.trim().isEmpty())&&!(soil_name.trim().isEmpty())&&soil_fertility>0&&soil_fertility<=100){
 		   this.name = name;
 		   soil = new Soil(soil_name,soil_fertility);   
 		   this.crop = crop;
          farmer_id = farmer_counter;
          farmer_counter++;
+         System.out.println("Farmer " + name + " is succesfully registered!");
 	   }
+      else{
+         System.out.println("Invalid set of details entered! Try again!");
+      }
    }
    
    /**

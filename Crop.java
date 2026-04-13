@@ -2,7 +2,6 @@ package CaseStudy;
 class Crop {
     private String name; 
 	private int water,pesticide,insects;
-	//find a way to make insects an ideally final variable or one which doesn't change anyhow.
 	private final int water_req;
 	private double health;
     
@@ -64,16 +63,6 @@ class Crop {
 		health = ((water_Effect+soil_Fertility/2)*(10-insect_Effect))/10;
 	}
 	
-	/**
-	 * @param soil_Fertility the parameter passed through by @change_Conditions().
-	 * redundant. Not needed actually. But the submission was done before I could realize.
-	 * @return nothing
-	 */
-
-	public void update_health(int soil_Fertility){
-		calc_health(soil_Fertility);
-	}
-
 	public int get_pesticide(){
 		return this.pesticide;
 	}	

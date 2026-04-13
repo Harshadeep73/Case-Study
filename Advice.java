@@ -19,4 +19,8 @@ class Advice{
       double[] values = {waterChange,pesticideChange,fertilizerChange};
       return values;
     }
+
+    public String get_recommendation(){
+      return recommendation;
+    }
 }
