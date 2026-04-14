@@ -49,7 +49,7 @@ class Advice{
     }
 
     public double[] dispence(){
-      double[] values = {waterChange,pesticideChange,fertilizerChange};
+      double[] values = {waterChange,fertilizerChange,pesticideChange};
       return values;
     }
 

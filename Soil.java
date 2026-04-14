@@ -4,7 +4,7 @@ public class Soil {
     private int soil_fertility;
     
     Soil(String name, int soil_fertility){
-        if(name.trim()!=""&&soil_fertility>0&&soil_fertility<=10) {	
+        if(!name.trim().isEmpty() && soil_fertility>0 && soil_fertility<=10) {	
         	this.name=name;
         	this.soil_fertility=soil_fertility;
         }
@@ -28,7 +28,7 @@ public class Soil {
 
     public void fertilize(int fertilizer){
           if(fertilizer > 0 && fertilizer <= 10){
-            soil_fertility += fertilizer;
+            soil_fertility = Math.min(10, soil_fertility+fertilizer);
             return;
           }
     }

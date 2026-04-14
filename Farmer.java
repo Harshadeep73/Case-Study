@@ -1,5 +1,5 @@
 import java.util.*;
-abstract class Farmer {
+class Farmer {
    private static int farmer_counter = 1;
    private final int farmer_id;
    private String name, recommendation;
@@ -13,11 +13,11 @@ abstract class Farmer {
 		   this.name = name;
 		   soil = new Soil(soil_name,soil_fertility);   
 		   this.crop = crop;
-         farmer_id = farmer_counter;
-         farmer_counter++;
+         farmer_id = farmer_counter++;
          System.out.println("Farmer " + name + " is succesfully registered!");
 	   }
       else{
+         farmer_id = 0;
          System.out.println("Invalid set of details entered! Try again!");
       }
    }
@@ -39,7 +39,7 @@ abstract class Farmer {
     */
 
    public double calc_Yield(){
-      this.yield = health*10;
+      this.yield = crop.getHealth()*10;
       return yield;
    }
    
@@ -52,7 +52,7 @@ abstract class Farmer {
    public void receive_advice(Advice advice_sent){
 	   this.recommendation = advice_sent.recommendation;
       double[] values = advice_sent.dispence();
-      act_on_advice(values[0], values[2], values[1]);
+      act_on_advice(values[0], values[1], values[2]);
    }
    
    /**
@@ -72,9 +72,9 @@ abstract class Farmer {
     * @return nothing
     */
 
-   public void act_on_advice(double waterChange, double pesticideChange, double fertilizerChange){      
+   public void act_on_advice(double waterChange, double fertilizerChange, double pesticideChange){      
        soil.fertilize(fertilizerChange);
-       change_Conditions(water+waterChange, crop.get_pesticide()+pesticideChange, soil.get_soil_fertility());
+       crop.change_Conditions(crop.getWater()+waterChange, soil.get_soil_fertility(), crop.getPesticide()+pesticideChange);
    }
 
 

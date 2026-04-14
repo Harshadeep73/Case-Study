@@ -25,7 +25,7 @@ class Crop {
 	
 	public void deploy(double water,double insects,double pesticide,double soil_Fertility){
           this.insects = insects;
-		  change_Conditions(water, pesticide, soil_Fertility);
+		  changeConditions(water, pesticide, soil_Fertility);
 	}
 
 	/**
@@ -41,7 +41,7 @@ class Crop {
 	public void changeConditions(double water,double pesticide,double soil_Fertility){
           this.water = water;
 		  this.pesticide = pesticide;
-		  update_health(int soil_Fertility);
+		  calcHealth(soil_Fertility);
 	}
 	
 	/**
@@ -64,10 +64,14 @@ class Crop {
 	}
 	
 	public double getPesticide(){
-		return this.pesticide;
+		return pesticide;
 	}
 
 	public double getInsects(){
 		return insects;
 	}	
+
+	public double getHealth(){
+		return health;
+	}
 }
