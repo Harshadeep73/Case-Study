@@ -1,24 +1,23 @@
 package CaseStudy;
 import java.util.*;
 public class Admin {
-    private ArrayList<String> record_of_advice;
+    private ArrayList<Advice> record_of_advice;
     
     Admin(){
         record_of_advice = new ArrayList<>();
     }
 
-    public void storeAdvice(String advice_sent){
-        if(!advice_sent.trim().isEmpty()){
-            record_of_advice.add(advice_sent);
-            return;
+    public void storeAdvice(Advice adviceSent){
+        if(!adviceSent.getRecommendation().isEmpty()){
+            record_of_advice.add(adviceSent);
         }
     }
 
     public void displayRecords(){
        System.out.println("");
        
-       for(String a : record_of_advice){
-          System.out.println(s);
+       for(Advice advice : record_of_advice){
+          System.out.println(advice.getRecommendation());
        }
     }
 
