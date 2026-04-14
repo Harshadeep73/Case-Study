@@ -51,7 +51,7 @@ class Farmer {
 
    public void receive_advice(Advice advice_sent){
 	   this.recommendation = advice_sent.recommendation;
-      double[] values = advice_sent.dispence();
+      double[] values = advice_sent.dispense();
       act_on_advice(values[0], values[1], values[2]);
    }
    

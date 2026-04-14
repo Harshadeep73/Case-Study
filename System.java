@@ -1,4 +1,5 @@
 package CaseStudy;
+
 public class System {
     private Admin admin;
     private Expert expert;
@@ -9,17 +10,17 @@ public class System {
     }
 
     public void process_data(Farmer f){
-       double waterChange = 0,fertilizerChange = 0,pesticideChange = 0;
+        double waterChange = 0, fertilizerChange = 0, pesticideChange = 0;
 
-       if(f.crop.health < 10){
-          waterChange = f.getCrop().get_water()-f.getCrop().getwater_req();
-          fertilizerChange = 10 - f.getCrop().get_soil_fertility;
-          pesticideChange  =  f.getCrop().getPesticide() - f.getCrop().getInsects();
-       }
-       expert.generate_advice();
+        if(f.getCrop().getHealth() < 10){
+            waterChange = f.getCrop().getWater() - f.getCrop().getWaterReq();
+            fertilizerChange = 10 - f.getSoil().get_soil_fertility();
+            pesticideChange = f.getCrop().getPesticide() - f.getCrop().getInsects();
+        }
 
-       admin.storeAdvice(expert.getAdvice());
-       farmer.act_on_advice(expert.getAdvice());
+        expert.generate_advice(waterChange, fertilizerChange, pesticideChange,f.getId(), f.getName());
+
+        admin.storeAdvice(expert.getAdvice().getRecommendation());
+        f.act_on_advice(waterChange, fertilizerChange, pesticideChange);
     }
-    
 }
