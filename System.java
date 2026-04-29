@@ -21,6 +21,6 @@ public class System {
         expert.generate_advice(waterChange, fertilizerChange, pesticideChange,f.getId(), f.getName());
 
         admin.storeAdvice(expert.getAdvice().getRecommendation());
-        f.act_on_advice(waterChange, fertilizerChange, pesticideChange);
+        f.recieveadvice(expert.getAdvice());
     }
 }
